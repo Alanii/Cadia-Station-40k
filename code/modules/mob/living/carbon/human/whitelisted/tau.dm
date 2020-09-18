@@ -1,6 +1,6 @@
 /mob/living/carbon/human/tau/leader
-	name = "Shas'O Ves'ya"
-	real_name = "Shas'O Ves'ya"
+	name = "Shas Ui Viorla Ripyka"
+	real_name = "Shas Ui Viorla Ripyka"
 	universal_speak = 1
 	gender = "male"
 	factions = list("tau")
@@ -17,7 +17,7 @@
 		switch(loadout)
 			if("Fire Warrior")
 				var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-				R.set_frequency(1441)
+				R.set_frequency(1473)
 				equip_to_slot_or_del(R, slot_ears)
 				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/fwarmor, slot_wear_suit)
 				equip_to_slot_or_del(new /obj/item/clothing/head/fwhelmet, slot_head)
@@ -41,7 +41,7 @@
 				equip_to_slot_or_del(W, slot_wear_id)
 			if("XV25 Stealth Suit")
 				var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-				R.set_frequency(1441)
+				R.set_frequency(1473)
 				equip_to_slot_or_del(R, slot_ears)
 				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/tausuit/XV25, slot_wear_suit)
 				equip_to_slot_or_del(new /obj/item/clothing/head/tausuit/XV25, slot_head)
@@ -66,7 +66,7 @@
 				equip_to_slot_or_del(W, slot_wear_id)
 			if("XV15 Stealth Suit")
 				var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-				R.set_frequency(1441)
+				R.set_frequency(1473)
 				equip_to_slot_or_del(R, slot_ears)
 				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/tausuit/XV15, slot_wear_suit)
 				equip_to_slot_or_del(new /obj/item/clothing/head/tausuit/XV15, slot_head)
@@ -90,7 +90,7 @@
 				equip_to_slot_or_del(W, slot_wear_id)
 			if("Water Caste Merchant")
 				var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-				R.set_frequency(1441)
+				R.set_frequency(1473)
 				equip_to_slot_or_del(R, slot_ears)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal, slot_shoes)
 				equip_to_slot_or_del(new /obj/item/clothing/head/tau/watercasteold, slot_head)
@@ -109,7 +109,7 @@
 				equip_to_slot_or_del(W, slot_wear_id)
 			if("Water Caste Diplomat")
 				var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-				R.set_frequency(1441)
+				R.set_frequency(1473)
 				equip_to_slot_or_del(R, slot_ears)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal, slot_shoes)
 				equip_to_slot_or_del(new /obj/item/clothing/head/tau/watercaste, slot_head)

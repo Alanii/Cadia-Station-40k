@@ -4,12 +4,12 @@ Chief Engineer
 /datum/job/chief_engineer
 	title = "Magos"
 	flag = CHIEF
-	department_head = list("Lord General")
+	department_head = list("Rogue Trader")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Adeptus Mechanicus and the Omnissiah"
+	supervisors = "The Adeptus Mechanicus and the Omnissiah"
 	selection_color = "#ffeeaa"
 	req_admin_notify = 1
 	minimal_player_age = 7
@@ -55,7 +55,7 @@ Station Engineer
 	total_positions = 5
 	spawn_positions = 5
 	faction = "Station"
-	supervisors = "the Magos"
+	supervisors = "The Magos"
 	selection_color = "#fff5cc"
 
 	default_pda = /obj/item/device/pda/engineering

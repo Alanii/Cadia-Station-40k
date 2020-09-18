@@ -80,30 +80,30 @@ Chef
 /*
 Botanist
 */
-///datum/job/hydro
-//	title = "Farmer"
-//	flag = BOTANIST
-//	department_head = list("Seneschal")
-//	department_flag = CIVILIAN
-//	faction = "Station"
-//	total_positions = 3
-//	spawn_positions = 2
-//	supervisors = "the Seneschal"
-//	selection_color = "#dddddd"
+/datum/job/hydro
+	title = "Farmer"
+	flag = BOTANIST
+	department_head = list("Seneschal")
+	department_flag = CIVILIAN
+	faction = "Station"
+	total_positions = 3
+	spawn_positions = 2
+	supervisors = "the Seneschal"
+	selection_color = "#dddddd"
 
-//	default_pda = /obj/item/device/pda/botanist
-//	default_headset = /obj/item/device/radio/headset/headset_srv
+	default_pda = /obj/item/device/pda/botanist
+	default_headset = /obj/item/device/radio/headset/headset_srv
 
-//	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue) // Removed tox and chem access because STOP PISSING OFF THE CHEMIST GUYS // //Removed medical access because WHAT THE FUCK YOU AREN'T A DOCTOR YOU GROW WHEAT //Given Morgue access because they have a viable means of cloning.
-//	minimal_access = list(access_hydroponics, access_morgue) // Removed tox and chem access because STOP PISSING OFF THE CHEMIST GUYS // //Removed medical access because WHAT THE FUCK YOU AREN'T A DOCTOR YOU GROW WHEAT //Given Morgue access because they have a viable means of cloning.
+	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue) // Removed tox and chem access because STOP PISSING OFF THE CHEMIST GUYS // //Removed medical access because WHAT THE FUCK YOU AREN'T A DOCTOR YOU GROW WHEAT //Given Morgue access because they have a viable means of cloning.
+	minimal_access = list(access_hydroponics, access_morgue) // Removed tox and chem access because STOP PISSING OFF THE CHEMIST GUYS // //Removed medical access because WHAT THE FUCK YOU AREN'T A DOCTOR YOU GROW WHEAT //Given Morgue access because they have a viable means of cloning.
 
-///datum/job/hydro/equip_items(var/mob/living/carbon/human/H)
-//	H.verbs += /mob/living/carbon/human/proc/renderaid									 //This is how we get the verb!
-//	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/hydroponics(H), slot_w_uniform)
-//	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
-//	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/botanic_leather(H), slot_gloves)
-//	H.equip_to_slot_or_del(new /obj/item/clothing/suit/apron(H), slot_wear_suit)
-//	H.equip_to_slot_or_del(new /obj/item/device/analyzer/plant_analyzer(H), slot_s_store) //for eldar spy to live, botanist must die, I cannot find the link between these two
+/datum/job/hydro/equip_items(var/mob/living/carbon/human/H)
+	H.verbs += /mob/living/carbon/human/proc/renderaid									 //This is how we get the verb!
+	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/hydroponics(H), slot_w_uniform)
+	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
+	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/botanic_leather(H), slot_gloves)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/apron(H), slot_wear_suit)
+	H.equip_to_slot_or_del(new /obj/item/device/analyzer/plant_analyzer(H), slot_s_store) //for eldar spy to live, botanist must die, I cannot find the link between these two
 
 /*
 Quartermaster
@@ -116,7 +116,7 @@ Quartermaster
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the sector munitorium and the imperial guard"
+	supervisors = "The Sector Munitorium and the Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/quartermaster
@@ -144,7 +144,7 @@ Cargo Technician
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Munitorum Priest and the Seneschal"
+	supervisors = "The Munitorum Priest and the Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/cargo
@@ -170,7 +170,7 @@ Shaft Miner
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "the Munitorum Priest and the Seneschal"
+	supervisors = "The Munitorum Priest and the Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/shaftminer
@@ -243,7 +243,7 @@ Mime
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Seneschal"
+	supervisors = "The Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/mime
@@ -289,7 +289,7 @@ Janitor
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Seneschal"
+	supervisors = "The Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/janitor
@@ -314,7 +314,7 @@ Librarian
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Seneschal"
+	supervisors = "The Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/librarian
@@ -414,13 +414,20 @@ Inquisitor
 	idtype = /obj/item/weapon/card/id/assistant
 
 /datum/job/eldarspy/equip_items(var/mob/living/carbon/human/H)
-	H.verbs += /mob/living/carbon/human/proc/renderaid									 //This is how we get the verb!
+	H.verbs += /mob/living/carbon/human/proc/renderaid //This is how we get the verb!
+	if(!H.unEquip(H.wear_id))
+		qdel(H.wear_id)
+	if(!H.unEquip(H.belt))
+		qdel(H.belt)
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/cape(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/color/grey(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)  //Looks like an assistant
 	H.equip_to_slot_or_del(new /obj/item/weapon/paper/espy(H), slot_in_backpack)  //With a cloaking device
 	H.equip_to_slot_or_del(new /obj/item/device/soulstone(H), slot_in_backpack)	//and a soulstone. Perfectly normal!
-	H.equip_to_slot_or_del(new /obj/item/weapon/card/id/syndicate(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/card/id/syndicate(H), slot_wear_id)
+	H.equip_to_slot_or_del(new /obj/item/device/pda(H), slot_belt)
+
+	H << "\blue To forge your ID, pull out the card and click on it, you can then insert it into your PDA to update its info." // Tells people how to use the Agent Card
 
 datum/job/assistant/get_access()
 	if(config.jobs_have_maint_access & ASSISTANTS_HAVE_MAINT_ACCESS) //Config has assistant maint access set

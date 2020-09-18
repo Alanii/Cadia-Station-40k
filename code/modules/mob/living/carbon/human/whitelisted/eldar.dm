@@ -12,6 +12,28 @@ Eldar
 	health = 150
 	status_flags = 0
 
+/mob/living/carbon/human/whitelisted/eldar/leader/New()
+	..()
+	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
+	R.set_frequency(1487)
+	equip_to_slot_or_del(R, slot_ears)
+	spawn(10)
+		equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/warlock, slot_back)
+		equip_to_slot_or_del(new /obj/item/device/radio/headset, slot_ears)
+		equip_to_slot_or_del(new /obj/item/clothing/under/color/lightpurple, slot_w_uniform)
+		equip_to_slot_or_del(new /obj/item/clothing/suit/wizrobe/warlock/lead, slot_wear_suit)
+		equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/rig/wizard/warlock, slot_head)
+		equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
+		equip_to_slot_or_del(new /obj/item/clothing/shoes/space_ninja, slot_shoes)
+		equip_to_slot_or_del(new /obj/item/device/webwaysummons, slot_in_backpack)
+		equip_to_slot_or_del(new /obj/item/device/soulstone, slot_in_backpack)
+		equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/scatapult, slot_in_backpack)
+		equip_to_slot_or_del(new /obj/item/weapon/gun/energy/eldarpistol, slot_in_backpack)
+		equip_to_slot_or_del(new /obj/item/clothing/gloves/warlock, slot_gloves)
+		equip_to_slot_or_del(new /obj/item/weapon/powersword/eldar, slot_belt)
+		sleep(5)
+		regenerate_icons()
+		rename_self("[name]")
 /mob/living/carbon/human/whitelisted/eldar
 	name = "Unknown"
 	real_name = "Unknown"
@@ -22,24 +44,54 @@ Eldar
 	maxHealth = 150
 	health = 150
 	status_flags = 0
+	var/speedmod = 1.2
+
+/mob/living/carbon/human/whitelisted/eldar/movement_delay()
+	. = -speedmod
+	. += ..()
 
 /mob/living/carbon/human/whitelisted/eldar/New()
 	verbs.Add(/mob/living/carbon/human/whitelisted/eldar/verb/lungeat, /mob/living/carbon/human/whitelisted/eldar/verb/stealth)
 	..()
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-	R.set_frequency(1441)
+	R.set_frequency(1487)
 	equip_to_slot_or_del(R, slot_ears)
-	equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/warlock, slot_back)
-	equip_to_slot_or_del(new /obj/item/device/radio/headset, slot_ears)
-	equip_to_slot_or_del(new /obj/item/clothing/under/color/lightpurple, slot_w_uniform)
-	equip_to_slot_or_del(new /obj/item/clothing/head/eldarhat, slot_head)
-	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
-	equip_to_slot_or_del(new /obj/item/clothing/shoes/space_ninja, slot_shoes)
-	equip_to_slot_or_del(new /obj/item/device/webwaysummons, slot_in_backpack)
-	equip_to_slot_or_del(new /obj/item/device/soulstone, slot_in_backpack)
-
-	regenerate_icons()
-	rename_self("[name]")
+	spawn(10)
+		var/weaponchoice = input("Loadout.","Select a Loadout") as null|anything in list("Corsair", "Guardian")
+		switch(weaponchoice)
+			if("Corsair")
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/corsair, slot_back)
+				equip_to_slot_or_del(new /obj/item/device/radio/headset, slot_ears)
+				equip_to_slot_or_del(new /obj/item/clothing/under/color/lightpurple, slot_w_uniform)
+				equip_to_slot_or_del(new /obj/item/clothing/suit/space/rig/wizard/corsair, slot_wear_suit)
+				equip_to_slot_or_del(new /obj/item/clothing/head/corsair, slot_head)
+				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
+				equip_to_slot_or_del(new /obj/item/clothing/shoes/swat/corsair, slot_shoes)
+				equip_to_slot_or_del(new /obj/item/device/webwaysummons, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/device/soulstone, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/scatapult, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/energy/eldarpistol, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/clothing/gloves/corsair, slot_gloves)
+				equip_to_slot_or_del(new /obj/item/weapon/powersword/eldar, slot_belt)
+				regenerate_icons()
+				rename_self("[name]")
+			if("Guardian") // Makes no difference right now; Waiting on sprites
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/corsair, slot_back)
+				equip_to_slot_or_del(new /obj/item/device/radio/headset, slot_ears)
+				equip_to_slot_or_del(new /obj/item/clothing/under/color/lightpurple, slot_w_uniform)
+				equip_to_slot_or_del(new /obj/item/clothing/suit/space/rig/wizard/corsair, slot_wear_suit)
+				equip_to_slot_or_del(new /obj/item/clothing/head/eldarhat, slot_head)
+				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
+				equip_to_slot_or_del(new /obj/item/clothing/shoes/swat/corsair, slot_shoes)
+				equip_to_slot_or_del(new /obj/item/device/webwaysummons, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/device/soulstone, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/scatapult, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/energy/eldarpistol, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/clothing/gloves/corsair, slot_gloves)
+				equip_to_slot_or_del(new /obj/item/weapon/powersword/eldar, slot_belt)
+				regenerate_icons()
+				rename_self("[name]") 
+		
 
 //lunge
 
@@ -122,4 +174,3 @@ Eldar
 			O.show_message("[U.name] appears from thin air!",1)
 		return 1
 	return 0
-

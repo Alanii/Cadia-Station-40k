@@ -227,6 +227,22 @@
 		new /obj/item/ammo_box/magazine/lasgunmag(src)
 		new /obj/item/ammo_box/magazine/lasgunmag(src)
 
+/obj/item/weapon/storage/box/vexlegisammo
+	name = "box of heavy slugs"
+	desc = "Slugs for the Vex Legis"
+	icon_state = "vexlegisammo"
+
+	New()
+		..()
+		new /obj/item/ammo_casing/voxlegis(src)
+		new /obj/item/ammo_casing/voxlegis(src)
+		new /obj/item/ammo_casing/voxlegis(src)
+		new /obj/item/ammo_casing/voxlegis(src)
+		new /obj/item/ammo_casing/voxlegis(src)
+		new /obj/item/ammo_casing/voxlegis(src)
+		new /obj/item/ammo_casing/voxlegis(src)
+		new /obj/item/ammo_casing/voxlegis(src)
+
 /obj/item/weapon/storage/box/autogunmag
 	name = "box of autogun ammunition"
 	desc = "More ammo than you will ever need."

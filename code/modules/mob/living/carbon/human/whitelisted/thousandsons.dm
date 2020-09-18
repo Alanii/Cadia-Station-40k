@@ -14,7 +14,7 @@ Thousand Sons
 	..()
 
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-	R.set_frequency(1441)
+	R.set_frequency(1479)
 	equip_to_slot_or_del(R, slot_ears)
 	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/thousandarmor/captain, slot_wear_suit)
@@ -25,12 +25,11 @@ Thousand Sons
 	equip_to_slot_or_del(new /obj/item/clothing/head/helmet/ksonshelmet, slot_head)
 	equip_to_slot_or_del(new /obj/item/weapon/chainsword/ksons_chainsword, slot_belt)
 	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag/inf, slot_r_store)
-	equip_to_slot_or_del(new /obj/item/weapon/spellbook/oneuse, slot_l_store)
 	equip_to_slot_or_del(new /obj/item/weapon/tank/oxygen/ksons, slot_back)
 	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/chaos/ksons, slot_s_store)
 	equip_to_slot_or_del(new /obj/item/weapon/shield/riot/ksons, slot_l_hand)
 	verbs += /mob/living/carbon/human/whitelisted/proc/ksonspell
-	
+
 /mob/living/carbon/human/whitelisted/ksons
 	name = "Unknown"
 	real_name = "Unknown"
@@ -43,7 +42,7 @@ Thousand Sons
 /mob/living/carbon/human/whitelisted/ksons/New()
 	..()
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-	R.set_frequency(1441)
+	R.set_frequency(1479)
 	equip_to_slot_or_del(R, slot_ears)
 	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/thousandarmor/sorc, slot_wear_suit)
@@ -54,7 +53,6 @@ Thousand Sons
 	equip_to_slot_or_del(new /obj/item/clothing/head/helmet/ksonshelmet, slot_head)
 	equip_to_slot_or_del(new /obj/item/weapon/chainsword/ksons_chainsword, slot_belt)
 	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag/inf, slot_r_store)
-	equip_to_slot_or_del(new /obj/item/weapon/spellbook/oneuse, slot_l_store)
 	equip_to_slot_or_del(new /obj/item/weapon/tank/oxygen/ksons, slot_back)
 	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/chaos/ksons, slot_s_store)
 	equip_to_slot_or_del(new /obj/item/weapon/shield/riot/ksons, slot_l_hand)
@@ -68,6 +66,8 @@ Thousand Sons
 	real_name = "[rndname] the Enlightened"
 	regenerate_icons()
 	rename_self("[name]")
+
+
 
 /mob/living/carbon/human/whitelisted/ksons/Life()
 	..()
@@ -96,8 +96,37 @@ Spell verb
 	set name = "Recieve the gifts of Tzeentch"
 	set desc = "This will give you spells"
 	//set src in usr
-	mind.spell_list += new /obj/effect/proc_holder/spell/aoe_turf/knock(null)
-	mind.spell_list += new /obj/effect/proc_holder/spell/aoe_turf/conjure/floor(null)
-	mind.spell_list += new /obj/effect/proc_holder/spell/aoe_turf/conjure/lesserforcewall(null)
-	mind.spell_list += new /obj/effect/proc_holder/spell/dumbfire/fireball(null)
+
+
+	var/offensivespellchoice = input("Select an offensive spell.","Offensive Spell") as null|anything in list("Fireball", "Blind", "Magic Missile")
+	switch(offensivespellchoice)
+		if("Fireball")
+			mind.spell_list += new /obj/effect/proc_holder/spell/dumbfire/fireball(null)
+
+		if ("Blind")
+			mind.spell_list += new /obj/effect/proc_holder/spell/targeted/trigger/blind
+
+		if ("Magic Missile")
+			mind.spell_list += new /obj/effect/proc_holder/spell/targeted/projectile/magic_missile
+
+
+
+
+	var/utilityspellchoice = input("Select an additional utility spell.","Utility Spell") as null|anything in list("Knock", "Conjure Cult Floor", "Forcewall", "Blink")
+	switch(utilityspellchoice)
+		if("Knock")
+			mind.spell_list += new /obj/effect/proc_holder/spell/aoe_turf/knock(null)
+
+		if ("Conjure Cult Floor")
+			mind.spell_list += new /obj/effect/proc_holder/spell/aoe_turf/conjure/floor(null)
+
+		if ("Forcewall")
+			mind.spell_list += new /obj/effect/proc_holder/spell/aoe_turf/conjure/lesserforcewall(null)
+
+
+		if ("Blink")
+			mind.spell_list += new /obj/effect/proc_holder/spell/targeted/turf_teleport/blink
+
+
+
 	verbs -= /mob/living/carbon/human/whitelisted/proc/ksonspell

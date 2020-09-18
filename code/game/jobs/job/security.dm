@@ -10,12 +10,12 @@ Head of Shitcurity
 /datum/job/hos
 	title = "Commissar"
 	flag = HOS
-	department_head = list("Lord General")
+	department_head = list("Rogue Trader")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Lord General"
+	supervisors = "The Rogue Trader"
 	selection_color = "#ffdddd"
 	req_admin_notify = 1
 	minimal_player_age = 14
@@ -71,7 +71,7 @@ Warden
 /datum/job/warden
 	title = "Sergeant"
 	flag = WARDEN
-	department_head = list("Comissar")
+	department_head = list("Commissar")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
@@ -125,12 +125,12 @@ Detective
 /datum/job/detective
 	title = "Enforcer"
 	flag = DETECTIVE
-	department_head = list("Comissar")
+	department_head = list("Commissar")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Adeptus Arbites"
+	supervisors = "Commissar"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
 
@@ -178,6 +178,56 @@ Detective
 				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/shotgun/combat/voxlegis(H), slot_r_hand)
 			if("Lasgun (Fully Equipped)")
 				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/lasgun(H), slot_r_hand)
+/*
+Primaris Psyker
+*/
+/datum/job/imperialpsyker
+	title = "Primaris Psyker"
+	flag = IMPPSYKER
+	department_head = list("Comissar")
+	department_flag = ENGSEC
+	faction = "Station"
+	total_positions = 1 // Might be changed in the future, probably not, we don't want the entire guard on the station to be psykers.
+	spawn_positions = 1
+	supervisors = "Commissar and your Platoon Sergeant."
+	selection_color = "#ffeeee"
+	minimal_player_age = 7 // This'll probably have to be changed in the future.
+	var/list/dep_access = null
+
+	default_pda = /obj/item/device/pda/security
+	default_headset = /obj/item/device/radio/headset/headset_sec
+	default_backpack = /obj/item/weapon/storage/backpack/impguard
+	default_satchel = /obj/item/weapon/storage/backpack/satchel_sec
+	default_id = /obj/item/weapon/card/id/dogtag
+
+	access = list(access_security, access_sec_doors, access_brig, access_court, access_maint_tunnels, access_morgue)
+	minimal_access = list(access_security, access_sec_doors, access_brig, access_court) //But see /datum/job/warden/get_access()
+
+/datum/job/imperialpsyker/equip_items(var/mob/living/carbon/human/whitelisted/H) // They'll need to get more Psyker-specific gear in the future.
+	H.verbs += /mob/living/carbon/human/proc/renderaid									 //This is how we get the verb!
+
+	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
+	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/imperialboots(H), slot_shoes)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/imperium_monk(H), slot_wear_suit) // The idea behind no armor is that, Psykers shouldn't be able to engage in DIRECT combat, they should work together with their fellow Guardsmen to stay safe.
+	H.equip_to_slot_or_del(new /obj/item/clothing/head/chaplain_hood(H), slot_head)
+	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/imperialbelt(H), slot_belt)
+	H.equip_to_slot_or_del(new /obj/item/weapon/staff(H), slot_r_hand)
+
+	H.equip_to_slot_or_del(new /obj/item/weapon/bible(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/book/manual/security_space_law(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/device/flashlight/seclite, slot_in_backpack)
+
+	H.maxPsy += 500// Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
+	H.verbs += /mob/living/carbon/human/whitelisted/proc/imprison
+	H.verbs += /mob/living/carbon/human/whitelisted/proc/smite
+	H.verbs += /mob/living/carbon/human/whitelisted/proc/quickening
+	H.verbs += /mob/living/carbon/human/whitelisted/proc/telepath
+
+	H.mutations.Add(TK)
+	H.update_mutations()
+
+
 
 /*
 Security Officer
@@ -185,7 +235,7 @@ Security Officer
 /datum/job/officer
 	title = "Imperial Guard"
 	flag = OFFICER
-	department_head = list("Comissar")
+	department_head = list("Commissar")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 500
@@ -197,7 +247,7 @@ Security Officer
 
 	default_pda = /obj/item/device/pda/security
 	default_headset = /obj/item/device/radio/headset/headset_sec
-	default_backpack = /obj/item/weapon/storage/backpack/security
+	default_backpack = /obj/item/weapon/storage/backpack/impguard
 	default_satchel = /obj/item/weapon/storage/backpack/satchel_sec
 	default_id = /obj/item/weapon/card/id/dogtag
 

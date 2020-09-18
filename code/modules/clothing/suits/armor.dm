@@ -37,8 +37,8 @@
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 
 /obj/item/clothing/suit/armor/hos/comissar2
-	name = "comissar coat"
-	desc = "A large coat with comissar stripes and heavy reinforcements."
+	name = "Commissar coat"
+	desc = "A large coat with Commissar stripes and heavy reinforcements."
 	icon_state = "comissar3"
 	item_state = "comissar2"
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 50, rad = 50)
@@ -49,7 +49,7 @@
 	flags = THICKMATERIAL
 
 /obj/item/clothing/suit/armor/hos/commisar2/festive
-	name = "comissar festive coat"
+	name = "Commissar festive coat"
 	icon_state = "comissar2"
 
 /obj/item/clothing/suit/armor/vest/warden
@@ -495,6 +495,8 @@ Lord Inquisitor Armor
 	item_state = "greatcoat"
 	blood_overlay_type = "armor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS | HEAD
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	armor = list(melee = 55, bullet = 35, laser = 55, energy = 15, bomb = 25, bio = 90, rad = 90)
 
 /obj/item/clothing/suit/armor/DKcoat/officer

@@ -338,6 +338,13 @@ Powersword
 	w_class = 3
 	attack_verb = list("mauled" , "mutilated" , "lacerated" , "ripped" , "torn")
 
+/obj/item/weapon/choppa/attack(mob/living/M, mob/living/user, def_zone)
+	..()
+	if (M && (isliving(M)) && (M.stat != DEAD) && (M.stat != UNCONSCIOUS) && (!istype(M, /mob/living/carbon/human/ork))) //Everything before is default attack proc.
+		user.adjustToxLoss(rand(5,10))
+
+
+
 /obj/item/weapon/torture
 	name = "Information Extractor"
 	desc = "Useful for finding out the truth..."

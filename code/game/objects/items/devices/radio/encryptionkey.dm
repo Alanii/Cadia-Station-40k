@@ -83,7 +83,7 @@
 	channels = list("Science" = 1, "Command" = 1)
 
 /obj/item/device/encryptionkey/heads/hos
-	name = "\proper the Comissar's encryption key"
+	name = "\proper the Commissar's encryption key"
 	desc = "An encryption key for a radio headset.  To access the imperial guard channel, use :s. For command, use :c."
 	icon_state = "hos_cypherkey"
 	channels = list("Guard" = 1, "Command" = 1)

@@ -79,7 +79,11 @@
 		if(istype(target,/turf/)||istype(target,/obj/structure/)||istype(target,/obj/machinery/door/))
 			target.ex_act(2)
 		..()
-
+/obj/item/projectile/beam/pulse3
+	name = "pulse"
+	icon_state = "tplasma"
+	damage = 30
+	trace_residue = "Considerable ablation and charring."
 
 /obj/item/projectile/beam/deathlaser
 	name = "death laser"

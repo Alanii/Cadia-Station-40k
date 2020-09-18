@@ -9,7 +9,7 @@ Research Director
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Ordo Xenos"
+	supervisors = "The Ordo Xenos"
 	selection_color = "#ffddff"
 	req_admin_notify = 1
 	minimal_player_age = 7
@@ -47,12 +47,12 @@ Scientist
 /datum/job/scientist
 	title = "Scientist"
 	flag = SCIENTIST
-	department_head = list("Research Director")
+	department_head = list("Ordo Xenos Inquisitor")
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 5
 	spawn_positions = 3
-	supervisors = "the research director"
+	supervisors = "The Ordo Xenos Inquisitor"
 	selection_color = "#ffeeff"
 
 	default_pda = /obj/item/device/pda/toxins

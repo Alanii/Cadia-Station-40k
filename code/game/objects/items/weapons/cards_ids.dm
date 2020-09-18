@@ -149,7 +149,8 @@ update_label("John Doe", "Clowny")
 	icon_state = pick("inquisitor", "inquisitor", "inquisitor2", "inquisitor3")
 
 /obj/item/weapon/card/id/gold
-	desc = "A golden card which shows power and might."
+	name = "Warrant of Trade"
+	desc = "A golden card which displays the Rogue Traders Warrant of Trade."
 	icon_state = "gold"
 	item_state = "gold_id"
 
@@ -208,12 +209,12 @@ update_label("John Doe", "Clowny")
 		..()
 
 /obj/item/weapon/card/id/generals_spare
-	name = "Millitant Militia ID"
-	desc = "The spare ID of the High Lord himself."
+	name = "Rogue Trader ID"
+	desc = "The spare ID of the Rogue Trader himself."
 	icon_state = "spareID"
 	item_state = "gold_id"
-	registered_name = "General"
-	assignment = "Imperial Command"
+	registered_name = "Rogue Trader"
+	assignment = "Rogue Trader"
 	New()
 		var/datum/job/captain/J = new/datum/job/captain
 		access = J.get_access()

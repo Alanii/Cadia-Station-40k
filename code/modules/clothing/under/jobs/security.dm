@@ -49,7 +49,7 @@
  * Head of Security
  */
 /obj/item/clothing/under/rank/head_of_security
-	desc = "It's a jumpsuit worn by those few with the dedication to achieve the position of \"Comissar\". It has additional armor to protect the wearer."
+	desc = "It's a jumpsuit worn by those few with the dedication to achieve the position of \"Commissar\". It has additional armor to protect the wearer."
 	name = "imperial uniform"
 	icon_state = "hos"
 	item_state = "r_suit"
@@ -89,7 +89,7 @@
 	can_roll = 0
 
 /obj/item/clothing/under/rank/head_of_security/navyblue
-	desc = "The insignia on this uniform tells you that this uniform belongs to the Comissar."
+	desc = "The insignia on this uniform tells you that this uniform belongs to the Commissar."
 	name = "imperial uniform"
 	icon_state = "hosblueclothes"
 	item_state = "hosblueclothes"

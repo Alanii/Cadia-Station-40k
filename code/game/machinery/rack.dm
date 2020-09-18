@@ -357,3 +357,16 @@
 /obj/machinery/rack/firstaid2/full
 	icon_state = "medr_4"
 	full = 1
+
+/obj/machinery/rack/heavyslug
+	name = "Vex Legis Ammo Rack"
+	desc = "It can hold 8 satchels of heavy slugs."
+	icon_state = "vla_0"
+	holds_type = /obj/item/weapon/storage/box/vexlegisammo
+	holds_name = "box of heavy slugs"
+	base_icon = "vla"
+	capacity = 8
+
+/obj/machinery/rack/heavyslug
+	icon_state = "vla_8"
+	full = 1

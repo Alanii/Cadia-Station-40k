@@ -115,7 +115,7 @@
 
 /obj/item/clothing/tie/medal/conduct
 	name = "distinguished conduct medal"
-	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is most basic award given by the Imperial Guard. It is often awarded by a Lord General to a member of his guard."
+	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is most basic award given by the Imperial Guard. It is often awarded by a Rogue Trader to a member of his guard."
 
 /obj/item/clothing/tie/medal/bronze_heart
 	name = "bronze heart medal"
@@ -147,8 +147,8 @@
 	item_color = "gold"
 
 /obj/item/clothing/tie/medal/gold/captain
-	name = "General's Medal"
-	desc = "A golden medal granted to a Lord General of the Imperium. It signifies the codified responsibilities of a Lord General, and their position of command."
+	name = "Rogue Trader's Medal"
+	desc = "A golden medal granted to a Rogue Trader of the Imperium. It signifies the codified responsibilities of a Rogue Trader, and their position of command."
 
 /obj/item/clothing/tie/medal/gold/heroism
 	name = "medal of exceptional heroism"

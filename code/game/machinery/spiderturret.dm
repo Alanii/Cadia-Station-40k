@@ -104,7 +104,7 @@ Interaction begins
 		qdel(src)
 	else if(href_list["REPAIR"])
 		usr.visible_message("<span class='warning'>  [usr] begins repairing the turret.</span>", "<span class='notice'>You begin to repair the turret.</span>", "<span class='warning>What was that sound?</span>")
-		sleep 30
+		sleep (30)
 		health = 200
 		update_icon()
 		usr.visible_message("<span class='notice'>[usr] finishes the repairs.</span>")

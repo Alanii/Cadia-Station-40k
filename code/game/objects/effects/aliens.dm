@@ -148,7 +148,7 @@
 	icon_state = "weeds"
 	anchored = 1
 	density = 0
-	var/health = 15
+	var/health = 2
 	var/obj/structure/alien/weeds/node/linked_node = null
 
 

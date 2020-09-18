@@ -91,7 +91,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	item_state = "tpc"
 	desc = "The Pulse Carbine is similar in most respects to a Pulse Rifle, but sacrifices the Pulse Rifle's longer range for greater portability and an underslung Photon Grenade launcher. This allows the weapon to fire a Photon Grenade over a short distance, a capability that is especially useful in close quarters where the weapon can then be used to pin down those enemies affected by the Photon Grenade's flashbang effect."
 	cell_type = "/obj/item/weapon/stock_parts/cell/infinite"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/pulse2)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pulse3)
 	var/zoom = 0
 
 /obj/item/weapon/gun/energy/pulse_rifle/tpc/attack_self(mob/living/user as mob)
@@ -184,4 +184,4 @@ Pulseblaster
 	item_state = "pulsep"
 	desc = "A small sidearm version of the Tau Pulse Rifle, issued to personnel only as a hold-out weapon for desperate situations."
 	cell_type = "/obj/item/weapon/stock_parts/cell/infinite"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/pulse2)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pulse3)

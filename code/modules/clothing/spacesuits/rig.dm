@@ -185,7 +185,8 @@
 	item_state = "corsair"
 	icon_state = "corsair"
 	slowdown = 0
-	armor = list(melee = 65, bullet = 55, laser = 75,energy = 70, bomb = 35, bio = 100, rad = 100)
+	armor = list(melee = 65, bullet = 50, laser = 50,energy = 70, bomb = 35, bio = 100, rad = 100)
+	allowed = list(/obj/item/weapon/gun/projectile/scatapult)
 
 //Medical Rig
 /obj/item/clothing/head/helmet/space/rig/medical

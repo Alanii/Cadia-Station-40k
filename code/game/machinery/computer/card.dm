@@ -28,9 +28,9 @@ var/time_last_changed_position = 0
 		"Master Servitor",
 		"Assistant",
 		"Servitor",
-		"Lord General",
+		"Rogue Trader",
 		"Seneschal",
-		"Comissar",
+		"Commissar",
 		"Sergeant",
 		"Magos",
 		"Munitorum Priest",
@@ -351,7 +351,7 @@ var/time_last_changed_position = 0
 							get_subordinates("Sister Hospitaller")
 						if(access_hos in scan.access)
 							region_access += 2
-							get_subordinates("Comissar")
+							get_subordinates("Commissar")
 						if(region_access)
 							authenticated = 1
 			else if ((!( authenticated ) && (istype(usr, /mob/living/silicon))) && (!modify))

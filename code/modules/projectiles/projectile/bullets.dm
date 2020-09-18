@@ -62,7 +62,7 @@
 /obj/item/projectile/bullet/shurikan			//eldar special ammo
 	name = "shuriken"
 	icon_state = "shuriken"
-	damage = 15
+	damage = 20 
 	piercing = 5 //monomolecular and such
 	woundtype = null
 

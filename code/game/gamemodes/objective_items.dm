@@ -17,13 +17,13 @@ datum/objective_item/steal/missile
 	name = "a missile launcher"
 	targetitem = /obj/item/weapon/gun/magic/staff/misslelauncher
 	difficulty = 5
-	excludefromjob = list("Captain", "Head of Security", "Warden", "Lord General", "Comissar", "Sergeant")
+	excludefromjob = list("Captain", "Head of Security", "Warden", "Rogue Trader", "Commissar", "Sergeant")
 
 datum/objective_item/steal/handtele
 	name = "a teleportation device"
 	targetitem = /obj/item/weapon/hand_tele
 	difficulty = 5
-	excludefromjob = list("Captain", "Lord General")
+	excludefromjob = list("Captain", "Rogue Trader")
 
 datum/objective_item/steal/artifact
 	name = "a device from the tombs (not a gun or staff, a more generic xenos device)"
@@ -65,10 +65,10 @@ datum/objective_item/steal/laserbrain/check_special_completion(var/obj/item/weap
 		return 0
 
 datum/objective_item/steal/capmedal
-	name = "the General's Medal"
+	name = "the Rogue Trader's Medal"
 	targetitem = /obj/item/clothing/tie/medal/gold/captain
 	difficulty = 5
-	excludefromjob = list("Captain", "Lord General")
+	excludefromjob = list("Captain", "Rogue Trader")
 
 datum/objective_item/steal/inferno
 	name = "an inferno pistol"
@@ -80,13 +80,13 @@ datum/objective_item/steal/nukedisc
 	name = "the meltabomb authentication disk"
 	targetitem = /obj/item/weapon/disk/nuclear
 	difficulty = 5
-	excludefromjob = list("Captain", "Lord General")
+	excludefromjob = list("Captain", "Rogue Trader")
 
 datum/objective_item/steal/carapace
 	name = "a suit of carapace armor"
 	targetitem = /obj/item/clothing/suit/armor/carapace
 	difficulty = 5
-	excludefromjob = list("Head of Security", "Warden", "Comissar", "Sergeant")
+	excludefromjob = list("Head of Security", "Warden", "Commissar", "Sergeant")
 
 datum/objective_item/steal/reactive
 	name = "the reactive teleport armor"
@@ -149,7 +149,7 @@ datum/objective_item/steal/psword
 	name = "a power sword or other power weapon"
 	targetitem = /obj/item/weapon/powersword
 	difficulty = 5
-	excludefromjob = list("Inquisitor","Comissar", "Quartermaster")
+	excludefromjob = list("Inquisitor","Commissar", "Quartermaster")
 
 //Unique Objectives
 datum/objective_item/unique/docs_red

@@ -210,11 +210,11 @@ mob/living/carbon/proc/handle_hallucinations()
 				if(people.len)
 					var/mob/living/carbon/human/speaker = pick(people)
 					var/message = pick("WE GOT ORKS!","I am sorry, but nurgle requires that I kill you.","Thank Tzeench...","'NIDS!!!!!","HERETIC! I WILL BURN YOU!","LET THE GALAXY BURN!","DEATH TO THE CORPSE EMPEROR!","Leave this place, foolish mon'keigh.","Nurgle loves us...","Tzeench grant sight to the followers of nurgle!","Slaanesh will devour their souls...","Oxygen is toxic to heretics!","There are too many Atmospherics Technicians!","Lho erry day...","FUCKING CLOWNS!!!","Always feed the bartender a toolbox.","MEKKA MEH GOZILLA!!!","HOLY FUCKING SHIT A NECRON!","Purge the heretics!","B- But you can't- no...","Are you dense?","I am going to eat your left foot if you aren't careful.","PARTY IN THE BRIG!","HEEEELP!!!!","Kill... me...","You are not real.","And tell them you don't exist.","Rocks can't eat lollipops.","You are a heretic? Well ain't that a BURNING shame...","Fun fact: I am a xeno.","Praise... Khorne... Blood...","Can I get a pan galactic gargle blaster?","Hey, I need meds.","Somebody hacked the servo skull...","Who blew up the [pick("brig","medbay","RnD lab","bridge","chapel")]?","PRAISE THE EMPEROR!","My toes are absolutely livid!","How's life?","Hey, follow me.","Take off your jumpsuit, right now.","What was that?","Can I have your headset?","I need a pair of shoes...","Hey, whats with all the bloody flooring?","Emperor I'm hungry though...","Well fuck. That's not good.","XENOS!!! AAAHH!!!","OY!","Pray to the emperor for guidance.","Hey, can we get a better paint job here?","I need you to build me a rocket ship.","Hey, can I borrow a gun?","GET TO ESCAPE!","Hey, what time is it?","Huh... Can you please punch me?","THROW ME YOUR BAG AND PUT YOUR HANDS IN THE AIR!","What do you think?","Hey, stop.","What... Is... That...","OW!","NOOOOOOOO!","Wait a sec...","Hm...","Wait, what's your name again?","How is life?","FOR TEH GREATER GOOD!!!!!!!!","git gud scrub","NERF HALLUCINATIONS!!!!")
-					if(prob(40)) message = "[pick("I","You","They","We","Orks","Heretics", "Inquisitors","Monkeys","Janitors","Tech Preists")][pick(" don't"," can't"," can"," should"," always","","","","","","","","")] [pick("like","eat","steal","execute","repair","clean","repurpose","run away from","convert","blow up","capture","drink","design","lick","sacrifice")] [pick("heretical rituals","heretics","lollipops","tech preists","lho leaf","monkeys","toolboxes","vendors","inquisitors","lord generals","the emperor","the imperium of man","floor tiles","godzilla","all the clowns","that fucking eldar","the medicus")]." //Another element of randomization ot the message.
+					if(prob(40)) message = "[pick("I","You","They","We","Orks","Heretics", "Inquisitors","Monkeys","Janitors","Tech Preists")][pick(" don't"," can't"," can"," should"," always","","","","","","","","")] [pick("like","eat","steal","execute","repair","clean","repurpose","run away from","convert","blow up","capture","drink","design","lick","sacrifice")] [pick("heretical rituals","heretics","lollipops","tech preists","lho leaf","monkeys","toolboxes","vendors","inquisitors","rogue traders","the emperor","the imperium of man","floor tiles","godzilla","all the clowns","that fucking eldar","the medicus")]." //Another element of randomization ot the message.
 					src << "<span class='name'>[speaker]</span> <span class='game say'>says, \"[message]\"</span>"
 			if(96 to 100)
 				if(prob(20)) //These were WAY to common.
-					var/contents = "[pick("++VOX PRIMARIS++","++VOX PRIMARIS++","++VOX SECONDUS++","++VOX XENOS++","++VOX UNKNOWN++","++VOX REDACTED++")]<br><br>This is [pick("Uthyr Drage","Terminus Grinnman","Callistarius Maxim","John Richards","Alexander Ybkrik","Lord Bradigan","The Emperor","The Silent King","THE BLOOD GOD","John Cena","your local Eversor","Richard Odell","Lord Byron","Emperor Napoleon","Edgar Allen Poe","Walt Whitman","Donald Trump","Comissar Yarrick","Zeus","Joseph Smith")], of the [pick("Ordo Xenos","Ordo Hereticus","Officio Munitorium","Ecclesiarchy","Officio REDACTED","Imperial Guard","Adeptus Arbites")].<br>It has come to [pick("my","our","my","our","our","my","your","slaanesh's","the emperor's","the ork's")] attention that [pick("excessive","very few","red","green","heretical","imperial","mechanical","explosive","unusual","slaaneshi","orky","blue","shitty","dank")] [pick("rituals","marines","supplies","drinks","research finds","inquisitors","geese","drugs","goose marines","invasive eucalyptus plants","plagues")] [pick("have boarded the outpost","have been detected in the area","have been shot recently","are being eaten on the outpost","are being followed","are guilty of acts of heresy","are to be executed by dawn","are to be considered impure","are to be worshipped with utmost zeal")]. [pick("An inquisitor will be dispatched to handle the issue.","We will be monitering the situation.","An exterminatus has been ordered on this planet to put an end to this.","It is advised that this is halted.","We trust you will handle the situation intelligently.","Please amass supplies at the barracks to deal with this.","Please begin evacuation.","Further infractions will be met with force.","A task force is inbound.","It is absolutely vital that you--*STATIC*","Bake some bread immediately or things will get out of hand.")]<br><br>[pick("PRAISE THE EMPEROR!","AVE IMPERATOR!","EMPEROR BE PRAISED!","THE EMPEROR PROTECTS!")]"
+					var/contents = "[pick("++VOX PRIMARIS++","++VOX PRIMARIS++","++VOX SECONDUS++","++VOX XENOS++","++VOX UNKNOWN++","++VOX REDACTED++")]<br><br>This is [pick("Uthyr Drage","Terminus Grinnman","Callistarius Maxim","John Richards","Alexander Ybkrik","Lord Bradigan","The Emperor","The Silent King","THE BLOOD GOD","John Cena","your local Eversor","Richard Odell","Lord Byron","Emperor Napoleon","Edgar Allen Poe","Walt Whitman","Donald Trump","Commissar Yarrick","Zeus","Joseph Smith")], of the [pick("Ordo Xenos","Ordo Hereticus","Officio Munitorium","Ecclesiarchy","Officio REDACTED","Imperial Guard","Adeptus Arbites")].<br>It has come to [pick("my","our","my","our","our","my","your","slaanesh's","the emperor's","the ork's")] attention that [pick("excessive","very few","red","green","heretical","imperial","mechanical","explosive","unusual","slaaneshi","orky","blue","shitty","dank")] [pick("rituals","marines","supplies","drinks","research finds","inquisitors","geese","drugs","goose marines","invasive eucalyptus plants","plagues")] [pick("have boarded the outpost","have been detected in the area","have been shot recently","are being eaten on the outpost","are being followed","are guilty of acts of heresy","are to be executed by dawn","are to be considered impure","are to be worshipped with utmost zeal")]. [pick("An inquisitor will be dispatched to handle the issue.","We will be monitering the situation.","An exterminatus has been ordered on this planet to put an end to this.","It is advised that this is halted.","We trust you will handle the situation intelligently.","Please amass supplies at the barracks to deal with this.","Please begin evacuation.","Further infractions will be met with force.","A task force is inbound.","It is absolutely vital that you--*STATIC*","Bake some bread immediately or things will get out of hand.")]<br><br>[pick("PRAISE THE EMPEROR!","AVE IMPERATOR!","EMPEROR BE PRAISED!","THE EMPEROR PROTECTS!")]"
 					var/message = ""
 					message += "<h1 class='alert'>Priority Announcement</h1>"
 					message += "<br><span class='alert'>[contents]</span><br>"
@@ -492,7 +492,7 @@ var/list/non_fakeattack_weapons = list(/obj/item/weapon/gun/projectile, /obj/ite
 				F.right = image('icons/mob/hallucination.dmi',F,"clown",MOB_LAYER, dir = EAST)
 				F.up = image('icons/mob/hallucination.dmi',F,"clown",MOB_LAYER, dir = NORTH)
 				F.down = image('icons/mob/hallucination.dmi',F,"clown",MOB_LAYER, dir = SOUTH)
-				F.name = pick("Slaaneshi","Heretic","Acrobat","Brain Damaged Git","Honk Infestation","Rude Lord General")
+				F.name = pick("Slaaneshi","Heretic","Acrobat","Brain Damaged Git","Honk Infestation","Rude Rogue Trader")
 				F.weapon_name = pick("bike horn", "power fist")
 			if(9)
 				F.left = image('icons/mob/hallucination.dmi',F,"spider",MOB_LAYER, dir = WEST)
@@ -506,7 +506,7 @@ var/list/non_fakeattack_weapons = list(/obj/item/weapon/gun/projectile, /obj/ite
 				F.right = image('icons/mob/hallucination.dmi',F,"cow",MOB_LAYER, dir = EAST)
 				F.up = image('icons/mob/hallucination.dmi',F,"cow",MOB_LAYER, dir = NORTH)
 				F.down = image('icons/mob/hallucination.dmi',F,"cow",MOB_LAYER, dir = SOUTH)
-				F.name = pick("Cow","Heretic","MOOO!","Veally Big Cow","Blue Moo","Mutant","Xeno","Lord General", "[target.name]")
+				F.name = pick("Cow","Heretic","MOOO!","Veally Big Cow","Blue Moo","Mutant","Xeno","Rogue Trader", "[target.name]")
 				F.weapon_name = pick("fangs", "UTTER DESTRUCTION", "huge ass sword")
 			if(11)
 				F.left = image('icons/mob/hallucination.dmi',F,"cat",MOB_LAYER, dir = WEST)
@@ -597,7 +597,7 @@ var/list/non_fakeattack_weapons = list(/obj/item/weapon/gun/projectile, /obj/ite
 				F.right = image('icons/mob/hallucination.dmi',F,"dafuq2",MOB_LAYER, dir = EAST)
 				F.up = image('icons/mob/hallucination.dmi',F,"dafuq2",MOB_LAYER, dir = NORTH)
 				F.down = image('icons/mob/hallucination.dmi',F,"dafuq2",MOB_LAYER, dir = SOUTH)
-				F.name = pick("SHARKNADOE","the imperial guard","Comissar Yarrick","The Greater Good")
+				F.name = pick("SHARKNADOE","the imperial guard","Commissar Yarrick","The Greater Good")
 				F.weapon_name = pick("Tau Rail Rifle","the fourth wall","a fridge")
 			if(24)
 				F.left = image('icons/mob/hallucination.dmi',F,"dafuq3",MOB_LAYER, dir = WEST)
@@ -605,7 +605,7 @@ var/list/non_fakeattack_weapons = list(/obj/item/weapon/gun/projectile, /obj/ite
 				F.up = image('icons/mob/hallucination.dmi',F,"dafuq3",MOB_LAYER, dir = NORTH)
 				F.down = image('icons/mob/hallucination.dmi',F,"dafuq3",MOB_LAYER, dir = SOUTH)
 				F.name = pick("PURGE THE MUTANT","strange xeno","The God Emperor of Mankind","Attack Squig")
-				F.weapon_name = pick("the comissar's whip","gork and mork","space aids","servo-arm")
+				F.weapon_name = pick("the Commissar's whip","gork and mork","space aids","servo-arm")
 			if(25)
 				F.left = image('icons/mob/hallucination.dmi',F,"dafuq4",MOB_LAYER, dir = WEST)
 				F.right = image('icons/mob/hallucination.dmi',F,"dafuq4",MOB_LAYER, dir = EAST)
@@ -633,7 +633,7 @@ var/list/non_fakeattack_weapons = list(/obj/item/weapon/gun/projectile, /obj/ite
 				F.up = image('icons/mob/hallucination.dmi',F,"dafuq7",MOB_LAYER, dir = NORTH)
 				F.down = image('icons/mob/hallucination.dmi',F,"dafuq7",MOB_LAYER, dir = SOUTH)
 				F.name = pick("CRABBY MAN","A Rogue Trader","Gork")
-				F.weapon_name = pick("The Comissar's Hat","sandbag","monkeys")
+				F.weapon_name = pick("The Commissar's Hat","sandbag","monkeys")
 			if(29)
 				F.left = image('icons/mob/hallucination.dmi',F,"dafuq8",MOB_LAYER, dir = WEST)
 				F.right = image('icons/mob/hallucination.dmi',F,"dafuq8",MOB_LAYER, dir = EAST)

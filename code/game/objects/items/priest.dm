@@ -56,7 +56,7 @@
 //		return
 
 	if (M.stat !=2)
-		if(M.mind && (M.mind.assigned_role == "Chaplain"))
+		if(M.mind && (M.mind.assigned_role == "Ministorum Priest"))
 			user << "\red You can't heal yourself!"
 			return
 		/*if((M.mind in ticker.mode.cult) && (prob(20)))
@@ -112,9 +112,9 @@
 
 	if (istype(A, /turf/simulated/floor))
 		user << "\blue You hit the floor with the bible."
-		if(user.mind && (user.mind.assigned_role == "Chaplain"))
+		if(user.mind && (user.mind.assigned_role == "Ministorum Priest"))
 			call(/obj/effect/rune/proc/revealrunes)(src)
-	if(user.mind && (user.mind.assigned_role == "Chaplain"))
+	if(user.mind && (user.mind.assigned_role == "Ministorum Priest"))
 		if(A.reagents && A.reagents.has_reagent("water")) //blesses all the water in the holder
 			user << "\blue You bless [A]."
 			var/water2holy = A.reagents.get_reagent_amount("water")

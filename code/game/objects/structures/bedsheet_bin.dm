@@ -94,13 +94,13 @@ LINEN BINS
 	item_color = "medical"
 
 /obj/item/weapon/bedsheet/cmo
-	name = "sister hospitaller's bedsheet"
+	name = "Sister Hospitaller's bedsheet"
 	desc = "It's a sterilized blanket that has a cross emblem.  There's some cat fur on it, likely from Runtime."
 	icon_state = "sheetcmo"
 	item_color = "cmo"
 
 /obj/item/weapon/bedsheet/hos
-	name = "comissar's bedsheet"
+	name = "Commissar's bedsheet"
 	desc = "It is decorated with a shield emblem.  While crime doesn't sleep, you do, but you are still THE LAW!"
 	icon_state = "sheethos"
 	item_color = "hosred"
@@ -112,7 +112,7 @@ LINEN BINS
 	item_color = "hop"
 
 /obj/item/weapon/bedsheet/ce
-	name = "chief engineer's bedsheet"
+	name = "Magos bedsheet"
 	desc = "It is decorated with a wrench emblem.  It's highly reflective and stain resistant, so you don't need to worry about ruining it with oil."
 	icon_state = "sheetce"
 	item_color = "chief"

@@ -125,7 +125,7 @@ Geneticist
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the sister hospitaller and lord inquisitor"
+	supervisors = "The Sister Hospitaller and Lord Inquisitor"
 	selection_color = "#ffeef0"
 
 	default_pda = /obj/item/device/pda/geneticist
@@ -153,7 +153,7 @@ Virologist
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the sister hospitaller"
+	supervisors = "The Sister Hospitaller"
 	selection_color = "#ffeef0"
 
 	default_pda = /obj/item/device/pda/viro

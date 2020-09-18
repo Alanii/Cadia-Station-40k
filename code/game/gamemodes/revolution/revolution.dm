@@ -13,17 +13,13 @@
 	var/list/datum/mind/revolutionaries = list()
 
 /datum/game_mode/revolution
-	name = "revolution"
-	config_tag = "revolution"
+	name = "Memestealer Cult"
+	config_tag = "Meme"
 	antag_flag = BE_REV
 	restricted_jobs = list("Security Officer", "Warden", "Detective", "AI", "Cyborg","Captain", "Head of Personnel", "Head of Security", "Chief Engineer", "Research Director", "Chief Medical Officer")
 	required_players = 500
 	required_enemies = 3
 	recommended_enemies = 3
-
-
-	uplink_welcome = "Revolutionary Uplink Console:"
-	uplink_uses = 10
 
 	var/finished = 0
 	var/checkwin_counter = 0
@@ -34,8 +30,8 @@
 //Announces the game type//
 ///////////////////////////
 /datum/game_mode/revolution/announce()
-	world << "<B>The current game mode is - Revolution!</B>"
-	world << "<B>Some crewmembers are attempting to start a revolution!<BR>\nRevolutionaries - Kill the Captain, HoP, HoS, CE, RD and CMO. Convert other crewmembers (excluding the heads of staff, and security officers) to your cause by flashing them. Protect your leaders.<BR>\nPersonnel - Protect the heads of staff. Kill the leaders of the revolution, and brainwash the other revolutionaries (by beating them in the head).</B>"
+	world << "<B>The current game mode is - Hidden!</B>"
+	world << "<B>Something creeps through the outpost...</B>"
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -60,10 +56,10 @@
 	for (var/i=1 to max_headrevs)
 		if (antag_candidates.len==0)
 			break
-		var/datum/mind/lenin = pick(antag_candidates)
-		antag_candidates -= lenin
-		head_revolutionaries += lenin
-		log_game("[lenin.key] (ckey) has been selected as a head rev")
+		var/datum/mind/Genestealer = pick(antag_candidates)
+		antag_candidates -= Genestealer
+		head_revolutionaries += Genestealer
+		log_game("[Genestealer.key] (ckey) has been selected as an infiltrator.")
 
 	if((head_revolutionaries.len < required_enemies)||(!head_check))
 		return 0
@@ -79,7 +75,7 @@
 			var/datum/objective/mutiny/rev_obj = new
 			rev_obj.owner = rev_mind
 			rev_obj.target = head_mind
-			rev_obj.explanation_text = "Assassinate [head_mind.name], the [head_mind.assigned_role]."
+			rev_obj.explanation_text = "Convert [head_mind.name], the [head_mind.assigned_role]."
 			rev_mind.objectives += rev_obj
 
 	//	equip_traitor(rev_mind.current, 1) //changing how revs get assigned their uplink so they can get PDA uplinks. --NEO

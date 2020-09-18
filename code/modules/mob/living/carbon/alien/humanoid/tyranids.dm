@@ -242,3 +242,12 @@
 	new /obj/effect/gibspawner/generic(get_turf(src))
 	qdel(src)
 	return
+
+/mob/living/carbon/alien/humanoid/tyranid/proc/rename()
+	set name = "Rename"
+	set desc = "Take on a unique identity after fully evolving."
+	set category = "Alien"
+
+	src.rename_self("[name]")
+	src << "<b>Select a new name for this Tyranid</b>"  //Make this usable only once? Downside would be that spelling mistakes couldn't be changed and the admins couldn't make someone change an offensive or memey name.
+	return

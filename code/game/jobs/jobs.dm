@@ -41,20 +41,21 @@ var/const/CHAPLAIN			=(1<<10)
 var/const/CELEBRITY			=(1<<11)
 var/const/MIME				=(1<<12)
 var/const/ASSISTANT			=(1<<13)
-var/const/ELDARSPY			=(1<<2)
+var/const/ELDARSPY			=(1<<14)
+var/const/IMPPSYKER			=(1<<15)
 
 var/list/assistant_occupations = list(
 	"Assistant",
 	"Atmospheric Technician",
 	"Munitorum Adept",
-	"Chaplain",
+	"Ministorum Priest",
 	"Lawyer",
 	"Record Keeper"
 )
 
 
 var/list/command_positions = list(
-	"Lord General",
+	"Rogue Trader",
 	"Seneschal",
 	"Lord Inquisitor, Ordo Xenos",
 	"Sister Hospitaller",
@@ -99,7 +100,7 @@ var/list/civilian_positions = list(
 	"Munitorum Adept",
 	"Shaft Miner",
 	"Inquisitor",
-	"Chaplain",
+	"Ministorum Priest",
 	"Celebrity",
 	"Mime",
 	"Assistant",
@@ -108,9 +109,10 @@ var/list/civilian_positions = list(
 
 
 var/list/security_positions = list(
-	"Comissar",
+	"Commissar",
 	"Sergeant",
 	"Enforcer",
+	"Primaris Psyker",
 	"Imperial Guard"
 )
 

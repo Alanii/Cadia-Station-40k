@@ -25,7 +25,6 @@
 	equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/security/night, slot_glasses)
 	equip_to_slot_or_del(new /obj/item/clothing/mask/breath, slot_wear_mask)
 	equip_to_slot_or_del(new /obj/item/clothing/head/helmet/sister, slot_head)
-	equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
 	spawn(35)
 		var/weaponchoice = input("Loadout.","Select a Loadout") as null|anything in list("Retributor", "Seraphim", "Battle Sister")
 		switch(weaponchoice)

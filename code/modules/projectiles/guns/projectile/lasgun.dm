@@ -20,6 +20,11 @@ LASGUNS
 	canattach = 0
 	scopetype = 0
 	ejectcasing = 0 //Technically energy based! None of that!
+	var/projectiles_per_shot = 3
+	var/deviation = 0
+	var/projectiles = 10000000000
+	var/cooldown = 1
+	var/projectile = /obj/item/projectile/bullet/lasgun
 
 /obj/item/weapon/gun/projectile/automatic/lasgun/process_chamber(var/eject_casing = 0, var/empty_chamber = 1)    //be afraid of my skill
 	..()

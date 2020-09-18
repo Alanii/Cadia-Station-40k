@@ -99,7 +99,7 @@
 	keyslot2 = new /obj/item/device/encryptionkey/headset_com
 
 /obj/item/device/radio/headset/heads/captain
-	name = "\proper Lord General Headset"
+	name = "\proper Rogue Trader Headset"
 	desc = "The headset of the boss. Channels are as follows: :c - command, :s - imperial guard, :e - engineering, :u - supply, :v - service, :m - medical, :n - science."
 	icon_state = "com_headset"
 	item_state = "headset"
@@ -113,7 +113,7 @@
 	keyslot2 = new /obj/item/device/encryptionkey/heads/rd
 
 /obj/item/device/radio/headset/heads/hos
-	name = "\proper Comissar Headset"
+	name = "\proper Commissar Headset"
 	desc = "The headset of the man in charge of keeping order and protecting the station. To access the imperial guard channel, use :s. For command, use :c."
 	icon_state = "com_headset"
 	item_state = "headset"

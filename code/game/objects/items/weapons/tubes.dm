@@ -41,7 +41,7 @@ Aluminum Tube
 
 /obj/item/aluminumtube3													//stage 2
 	name = "Device"
-	desc = "A prototype mechadendrite. At this stage it can accept a Cable Layer, an AutoCannon or a Hydraulic Clamp."
+	desc = "A prototype mechadendrite. At this stage it can accept a Cable Layer, an AutoGun, Hydraulic Clamp or a Syringe Gun."
 	icon = 'icons/obj/pipes/regular.dmi'
 	icon_state = "21"
 
@@ -74,6 +74,17 @@ Aluminum Tube
 		if(do_after(user, 60))
 			qdel(W)
 			new /obj/item/aluminumtube4/AC(user.loc)
+			qdel(src)
+			return
+		else
+			user.visible_message("<span class='notice'>[user] stops unexpectedly.</span>", "<span class='notice'>Your focus is interupted and you abandon the device.</span>")
+
+	if(istype(W,/obj/item/mecha_parts/mecha_equipment/tool/syringe_gun))
+		user << "You begin intergrating the syringe gun."
+		playsound(src.loc, "sound/items/welder2.ogg", 50, 0, 4)
+		if(do_after(user, 60))
+			qdel(W)
+			new /obj/item/aluminumtube4/surgical(user.loc)
 			qdel(src)
 			return
 		else

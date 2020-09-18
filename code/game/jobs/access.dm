@@ -307,7 +307,7 @@
 		if(access_heads)
 			return "Bridge"
 		if(access_captain)
-			return "Lord General"
+			return "Rogue Trader"
 		if(access_all_personal_lockers)
 			return "Personal Lockers"
 		if(access_chapel_office)
@@ -365,7 +365,7 @@
 		if(access_hop)
 			return "Seneschal Office"
 		if(access_hos)
-			return "Comissar Office"
+			return "Commissar Office"
 		if(access_ce)
 			return "Adeptus Magos Office"
 		if(access_RC_announce)
@@ -406,7 +406,7 @@
 	return list("Assistant", "Seneschal", "Bartender", "Chef", "Botanist", "Munitorum Priest", "Munitorum Adept",
 				"Shaft Miner", "Mime", "Janitor", "Record Keeper", "Ministorum Priest",
 				"Trauma Medicus", "Pharmacologist", "Geneticist", "Virologist",
-				"Scientist", "Cybernetica Acolyte", "Enforcer", "Commissar", "Lord General", "Sergeant", "Tech Priest", "Adeptus Magos", "Sister Hospitaller", "Celebrity")
+				"Scientist", "Cybernetica Acolyte", "Enforcer", "Commissar", "Rogue Trader", "Sergeant", "Tech Priest", "Adeptus Magos", "Sister Hospitaller", "Celebrity")
 
 proc/get_all_job_icons() //For all existing HUD icons
 	return get_all_jobs() + list("Prisoner")

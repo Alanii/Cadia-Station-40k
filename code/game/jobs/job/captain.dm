@@ -2,14 +2,14 @@
 Captain
 */
 /datum/job/captain
-	title = "Lord General"
+	title = "Rogue Trader"
 	flag = CAPTAIN
-	department_head = list("Centcom")
+	department_head = list("Rogue Trader")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The System Governor, Adeptus Administratum and the Emperor."
+	supervisors = "Yourself"
 	selection_color = "#ccccff"
 	req_admin_notify = 1
 	minimal_player_age = 14
@@ -33,7 +33,7 @@ Captain
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/imperialboots(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/caphat(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(H), slot_glasses)
-	H.equip_to_slot_or_del(new 	/obj/item/clothing/gloves/lordcommander(H), slot_gloves)
+	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/lordcommander(H), slot_gloves)
 
 	//Equip ID box & telebaton
 	if(H.backbag == 1)
@@ -42,13 +42,16 @@ Captain
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/ids(H.back), slot_in_backpack)
 		H.equip_to_slot_or_del(new /obj/item/weapon/melee/telebaton(H), slot_in_backpack)
 
-	world << "<b>[H.real_name] is the Imperial Commander!</b>"
+	world << "<b>[H.real_name] is the Rogue Trader!</b>"
+
+	spawn(10)
+		H.wear_id.name = "[H.real_name]'s Warrant of Trade"
 
 /datum/job/captain/get_access()
 	return get_all_accesses()
 
 /*
-LG promotion
+RT promotion
 */
 
 /mob/living/carbon/human/proc/promoteIG(var/mob/living/carbon/human/M in mob_list)
@@ -62,7 +65,6 @@ LG promotion
 
 	var/list/options = list(
 		"Conscript to Guardsman",
-		"Promote to Captain",
 		"Cancel",
 		)
 
@@ -91,21 +93,6 @@ LG promotion
 			M.regenerate_icons()
 			U.visible_message(text("<span class='alert'>[U] slaps a new ID onto [M].</span>"))
 			U.say("Welcome the to guard.")
-		if ("Promote to Captain")
-			for(var/obj/item/weapon/card/id/W in M.contents)
-				M.unEquip(W)
-				U.visible_message(text("<span class='alert'>[U] snatches [W] and tosses it on the ground.</span>"))
-
-			var/obj/item/weapon/card/id/dogtag/W = new
-			W.access = get_all_accesses()
-			W.assignment = "Captain"
-			W.registered_name = M.real_name
-			W.update_label()
-			M.equip_to_slot_or_del(W, slot_wear_id)
-			M.regenerate_icons()
-			U.visible_message(text("<span class='alert'>[U] slaps a new ID onto [M].</span>"))
-			playsound(U.loc, 'sound/voice/numberoneguy.ogg', 75, 0)
-
 		else
 			return
 
@@ -115,12 +102,12 @@ Head of Personnel
 /datum/job/hop
 	title = "Seneschal"
 	flag = HOP
-	department_head = list("Lord General")
+	department_head = list("Rogue Trader")
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the captain"
+	supervisors = "The Rogue Trader"
 	selection_color = "#ddddff"
 	req_admin_notify = 1
 	minimal_player_age = 10
@@ -148,7 +135,6 @@ Head of Personnel
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/head_of_personnel(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/hopboots(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/hopcap(H), slot_head)
-	H.equip_to_slot_or_del(new /obj/item/weapon/paper/hop(H), slot_in_backpack)
 
 	//Equip ID box & telebaton
 	if(H.backbag == 1)

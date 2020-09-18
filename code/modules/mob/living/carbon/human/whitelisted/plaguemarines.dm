@@ -8,15 +8,15 @@ Plague Marines
 	real_name = "Kornus the Maledictor"
 	universal_speak = 1
 	gender = "male"
-	maxHealth = 300
-	health = 300
+	maxHealth = 250
+	health = 250
 	status_flags = 0
 
 /mob/living/carbon/human/whitelisted/pmleader/New()
 	..()
 
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-	R.set_frequency(1441)
+	R.set_frequency(1457)
 	equip_to_slot_or_del(R, slot_ears)
 	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/pmpowerarmor, slot_wear_suit)
@@ -67,14 +67,14 @@ Plague Marines
 	real_name = "Unknown"
 	universal_speak = 1
 	gender = "male"
-	maxHealth = 300
-	health = 300
+	maxHealth = 250
+	health = 250
 	status_flags = 0
 
 /mob/living/carbon/human/whitelisted/pm/New()
 	..()
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-	R.set_frequency(1441)
+	R.set_frequency(1457)
 	equip_to_slot_or_del(R, slot_ears)
 	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/pmpowerarmor, slot_wear_suit)

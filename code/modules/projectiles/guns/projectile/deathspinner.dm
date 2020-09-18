@@ -3,12 +3,13 @@
 	desc = "The Shuriken Catapult is the standard type of shuriken weapon, firing razor-sharp monomolecular discs capable of slicing through flesh and penetrating a considerable thickness of plasteel armour."
 	icon_state = "scatapult"
 	item_state = "shuriken_pistol"
-	w_class = 5
+	w_class = 3
 	var/projectiles_per_shot = 10
 	var/deviation = 1
 	var/projectile
 	var/projectiles = 100000000
 	var/cooldown = 1
+	slot_flags = SLOT_BACK
 	projectile = /obj/item/projectile/bullet/shurikan
 
 /obj/item/weapon/gun/projectile/scatapult/attack_self(mob/living/user as mob)

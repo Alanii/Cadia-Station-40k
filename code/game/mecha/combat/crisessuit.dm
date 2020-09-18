@@ -6,7 +6,7 @@
 	//pixel_x = -10 //And now we don't need this!
 	bound_width = 64 //It's feet stand over two tiles.
 	step_in = 1
-	health = 1000 //No more 200,000 health levels...
+	health = 500 //No more 200,000 health levels...
 	deflect_chance = 25
 	damage_absorption = list("brute"=0.3,"fire"=0.3,"bullet"=0.4,"laser"=0.5,"energy"=0.3,"bomb"=1)
 	max_temperature = 65000

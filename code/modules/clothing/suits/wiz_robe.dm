@@ -55,6 +55,17 @@
 	allowed = list(/obj/item/weapon/teleportation_scroll)
 	flags_inv = HIDEJUMPSUIT
 
+/obj/item/clothing/suit/wizrobe/warlock/lead
+	name = "Warlock Robe"
+	desc = "An incredible example of Eldar Technology, these ones seem especially elegant"
+	icon_state = "warlock"
+	item_state = "warlock"
+	gas_transfer_coefficient = 0.01
+	permeability_coefficient = 0.01
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	armor = list(melee = 65, bullet = 50, laser = 50,energy = 70, bomb = 35, bio = 100, rad = 100)
+	allowed = list(/obj/item/weapon/teleportation_scroll)
+	flags_inv = HIDEJUMPSUIT
 
 /obj/item/clothing/suit/wizrobe/red
 	name = "red wizard robe"

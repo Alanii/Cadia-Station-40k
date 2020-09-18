@@ -218,7 +218,7 @@ imperial class helment
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 
 /obj/item/clothing/head/comissar2
-	name = "Comissar Cap"
+	name = "Commissar Cap"
 	desc = "An armored cap with the imperial insignia on it, symbolizing the authority of a Comissar."
 	icon_state = "comissar3"
 	flags = HEADCOVERSEYES

@@ -405,9 +405,9 @@ Update: What have we created? something awful -wel ard
 	if(ticker.mode.name == "necron")
 		usr << "\blue Reinforcements are cut off! OH MY GOD!!!"
 		return
-	/*if(world.time - round_start_time < config.shuttle_refuel_delay)
+	if(world.time - round_start_time < config.shuttle_refuel_delay)
 		usr << "\blue The round has just begun! Please wait another [abs(round(((world.time - round_start_time) - config.shuttle_refuel_delay)/600))] minutes before trying again."
-		return  *///don't want a delay for testing
+		return  //don't want a delay for testing
 		
 	if(inmenu)
 		usr << "\blue I didn't learn to code yesterday. First- close the menu you already have open."
@@ -524,7 +524,7 @@ Update: What have we created? something awful -wel ard
 
 		if("KRIEGOFFICERS")
 			message_admins("[usr.key] executed RTD faction: Krieger Officer.", 0)
-			usr << "\blue You are an officer of the Death Korps of Krieg. The Lord General of ArchAngel IV has activated a distress beacon."
+			usr << "\blue You are an officer of the Death Korps of Krieg. The Rogue Trader of ArchAngel IV has activated a distress beacon."
 			usr.loc = get_turf(locate("landmark*kriegofficerstart"))
 			var/mob/living/carbon/human/kriegofficer/new_character = new(usr.loc)
 			new_character.key = usr.key
